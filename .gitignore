@@ -28,3 +28,6 @@
 /config/database.yml
 /config/database_pg.yml
 /app/.DS_Store
+
+# Ignore application configuration
+/config/application.yml

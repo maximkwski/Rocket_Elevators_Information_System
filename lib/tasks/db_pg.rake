@@ -1,4 +1,5 @@
 require 'pg'
+#require 'send_sms'
 task spec: ["pg:db:test:prepare"]
 
 namespace :pg do
@@ -51,6 +52,10 @@ namespace :pg do
       task :dump do
         Rake::Task["db:schema:dump"].invoke
       end
+    end
+
+    task :sms do
+      Rake::Task["send_sms.rb"].invoke
     end
 
     namespace :test do
